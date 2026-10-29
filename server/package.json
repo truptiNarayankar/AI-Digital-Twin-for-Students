@@ -1,0 +1,54 @@
+{
+  "name": "ai-digital-twin-server",
+  "version": "1.0.0",
+  "description": "Node.js + TypeScript + Express + MongoDB Backend Foundation for AI Digital Twin Platform",
+  "main": "dist/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test": "tsx tests/health.test.ts && tsx tests/auth.test.ts && tsx tests/student.test.ts && tsx tests/resume.test.ts && tsx tests/interview.test.ts && tsx tests/skill-gap.test.ts && tsx tests/placement.test.ts",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "ai-digital-twin",
+    "express",
+    "typescript",
+    "mongodb",
+    "mongoose"
+  ],
+  "author": "AI Digital Twin Team",
+  "license": "MIT",
+  "dependencies": {
+    "@google/genai": "^2.22.0",
+    "argon2": "^0.45.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^8.7.0",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.3",
+    "mammoth": "^1.12.3",
+    "mongoose": "^8.9.5",
+    "morgan": "^1.10.0",
+    "multer": "^2.4.0",
+    "pdf-parse": "^2.4.5",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/morgan": "^1.9.9",
+    "@types/multer": "^2.2.0",
+    "@types/node": "^22.10.7",
+    "@types/pdf-parse": "^1.1.5",
+    "@types/supertest": "^6.0.2",
+    "supertest": "^7.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
